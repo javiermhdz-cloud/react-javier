@@ -4,8 +4,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  padding: 20px;
   margin: 0;
 }
 
@@ -14,30 +13,39 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* Contenedor en grid para alinear las tarjetas */
+#pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
 .card {
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 24px;
+  padding: 20px;
   text-align: center;
-  width: 250px;
+  width: 220px;
 }
 
 .card img {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   background-color: #eef2f5;
   border-radius: 50%;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .card h2 {
   margin: 10px 0;
   color: #2c3e50;
+  font-size: 18px;
 }
 
 .card p {
-  margin: 8px 0;
+  margin: 6px 0;
   color: #555;
   font-size: 14px;
 }
