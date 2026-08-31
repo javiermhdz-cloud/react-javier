@@ -1,6 +1,5 @@
 async function obtenerPokemon() {
   try {
-    // Petición a la PokéAPI para consultar a Ditto
     const response = await fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur");
     const data = await response.json();
 
@@ -8,11 +7,13 @@ async function obtenerPokemon() {
 
     const contenedor = document.getElementById("pokemon-card");
 
-    // Extraemos la información relevante
-    const imagen = data.sprites.front_default; // 1. Imagen
-    const nombre = data.name.toUpperCase();     // Elemento 1: Nombre
-    const tipo = data.types[0].type.name;       // Elemento 2: Tipo principal
-    const experiencia = data.base_experience;   // Elemento 3: Experiencia base
+    const imagen = data.sprites.front_default;
+    //nombre
+    const nombre = data.name.toUpperCase();
+    //tipo principal
+    const tipo = data.types[0].type.name;
+    //experiencia base
+    const experiencia = data.base_experience;
 
     // Insertamos la imagen y los 3 elementos en el HTML
     contenedor.innerHTML = `
@@ -28,5 +29,5 @@ async function obtenerPokemon() {
   }
 }
 
-// Llamada a la función
+// Llamada a la funcion
 obtenerPokemon();
